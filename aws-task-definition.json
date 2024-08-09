@@ -1,0 +1,61 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:023810699384:task-definition/cloud-devops-task-definitions:1",
+    "containerDefinitions": [
+        {
+            "name": "cloud-devops",
+            "image": "023810699384.dkr.ecr.ap-southeast-2.amazonaws.com/cloud-devops",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "cloud-devops-5000-tcp",
+                    "containerPort": 5000,
+                    "hostPort": 5000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "cloud-devops-task-definitions",
+    "executionRoleArn": "arn:aws:iam::023810699384:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-08-09T12:31:00.311Z",
+    "registeredBy": "arn:aws:iam::023810699384:root",
+    "tags": []
+}
